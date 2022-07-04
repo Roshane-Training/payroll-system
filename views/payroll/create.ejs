@@ -1,0 +1,35 @@
+<section class="">
+    <div class="mb-6">
+        <h1 class="font-semibold text-2xl text-slate-800">Create Payroll</h1>
+        <p class="text-sm">Create a new payroll for an existing employee</p>
+    </div>
+    <form action="/admin/payroll/add" method="post" class="lg:w-1/2 w-full bg-white p-7 rounded shadow-md grid grid-cols-2 gap-3">
+        <div class="flex flex-col">
+            <label class="mb-2 select-none" for="employee">Employee</label>
+            <select name="employee">
+                <% employees.forEach(employee => { %>
+                <option value="<%= employee.id %>"><%= employee.full_name %></option>
+                <% }) %>
+            </select>
+        </div>
+        <div class="flex flex-col">
+            <label class="mb-2 select-none" for="department">Department</label>
+            <select name="department">
+                <% departments.forEach(department => { %>
+                <option value="<%= department.id %>"><%= department.dept_name %></option>
+                <% }) %>
+            </select>
+        </div>
+        <div class="flex flex-col">
+            <label class="mb-2 select-none" for="hours_worked">Regular Hours Worked</label>
+            <input type="number" min="1" name="hours_worked" />
+        </div>
+        <div class="flex flex-col">
+            <label class="mb-2 select-none" for="overtime_hours_worked">Overtime Hours Worked</label>
+            <input type="number" min="1" name="overtime_hours_worked" />
+        </div>
+        <div class="col-span-2">
+            <button type="submit" class="bg-primary text-white px-4 py-3 rounded shadow-primary">Create Payroll</button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,22 @@
+<!-- Stylesheets/JS Imports -->
+<%- include("../partials/imports.ejs") %>
+
+<div class="h-screen grid place-items-center">
+    <div class="mx-auto w-1/2 lg:w-1/4">
+        <h1 class="text-slate-600 text-center font-bold text-lg">Admin Sign In</h1>
+        <form class="signin-form flex flex-col mt-10 bg-white px-10 shadow-md" action="/admin/login" method="POST">
+            <p class="text-slate-600 text-center text-base w-full my-6 select-none">Sign in to start your session</p>
+            <div class="flex flex-col mb-6">
+                <label class="mb-2 select-none" for="email">Email</label>
+                <input type="email" name="email" class="placeholder:text-slate-400" placeholder="ex: john@mail.com" />
+            </div>
+            <div class="flex flex-col mb-6">
+                <label class="mb-2 select-none" for="password">Password</label>
+                <input type="password" name="password" class="placeholder:text-slate-400" placeholder="**********" />
+            </div>
+            <div class="flex col-span-2 justify-end mb-6">
+                <button class="bg-blue-500 text-white px-4 py-2" type="submit">Sign In</button>
+            </div>
+        </form>
+    </div>
+</div>

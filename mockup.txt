@@ -1,0 +1,35 @@
+employees
+- id
+- uuid
+- fist_nm
+- last_nm
+- email
+- password
+- created_at
+- updated_at
+
+departments
+- id
+- name
+- hourly_rate
+
+pay_cycle
+- id
+- employee_id
+# Below field is 30 days after the employee has been registered by default
+- cycle_date
+
+employee_logs
+- id
+- checkin_time
+- checkout_time
+- employee_id
+- department_id
+
+
+pay_history
+- id
+- transaction_id
+- is_paid
+- employee_id
+- pay_cycle_id

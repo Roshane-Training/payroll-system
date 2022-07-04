@@ -1,0 +1,29 @@
+<div class="flex items-center mb-5">
+    <button onclick="history.back()" class="bg-primary text-secondary rounded px-4 py-1 text-center align-baseline">&lt;</button>
+    <small class="ml-2">Go Back</small>
+</div>
+<section class="">
+    <div class="mb-6">
+        <h1 class="font-semibold text-2xl text-slate-800">Edit Payroll</h1>
+        <p class="text-sm">Edit an existing payroll for an employee</p>
+    </div>
+    <form action="/admin/payroll/add" method="post" class="lg:w-1/2 w-full bg-white p-7 rounded shadow-md grid grid-cols-2 gap-3">
+        <div class="flex flex-col col-span-2">
+            <label class="mb-2 select-none" for="full_name">Employee Full Name</label>
+            <input type="text" name="full_name" value="Roshane Johnson (DB Not Implemented)" readonly />
+        </div>
+        <div class="flex flex-col">
+            <label class="mb-2 select-none" for="hours_worked">Regular Hours Worked</label>
+            <input type="number" min="1" name="hours_worked" value="<%= payroll.hours_worked %>" />
+        </div>
+        <div class="flex flex-col">
+            <label class="mb-2 select-none" for="overtime_hours_worked">Overtime Hours Worked</label>
+            <input type="number" min="1" name="overtime_hours_worked" value="<%= payroll.overtime_hours %>" />
+        </div>
+        <div class="col-span-2">
+            <button type="submit" class="bg-primary text-white px-4 py-3 rounded shadow-primary">Edit Payroll</button>
+        </div>
+    </form>
+</section>
+
+<!-- TODO Finish working on edit payroll endpoint and view -->

@@ -1,0 +1,31 @@
+<section class="">
+    <div class="mb-6">
+        <h1 class="font-semibold text-2xl text-slate-800">Create Employee</h1>
+        <p class="text-sm">Create a new employee</p>
+    </div>
+    <form action="/admin/employee/add" method="post" class="lg:w-1/2 w-full bg-white p-7 rounded shadow-md grid grid-cols-2 gap-3">
+        <div class="flex flex-col">
+            <label for="first_nm">First Name</label>
+            <input type="text" name="first_nm" />
+        </div>
+        <div class="flex flex-col">
+            <label for="last_nm">Last Name</label>
+            <input type="text" name="last_nm" />
+        </div>
+        <div class="flex flex-col col-span-2">
+            <label for="email">Email</label>
+            <input type="email" required name="email" />
+        </div>
+        <div class="flex flex-col">
+            <label for="password">Password</label>
+            <input type="password" required name="password" />
+        </div>
+        <div class="flex flex-col">
+            <label for="c_password">Confirm Password</label>
+            <input type="password" name="c_password" />
+        </div>
+        <div class="col-span-2">
+            <button type="submit" class="bg-primary text-white px-4 py-3 rounded shadow-primary">Add Employee</button>
+        </div>
+    </form>
+</section>
